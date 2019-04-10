@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+@import './Task.scss';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #2b3252;
+  box-sizing: border-box;
+  color: #61dafb;
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes smooth-in {
+  from {
+    transform: translateX(-200%);
+  }
+  98% {
+    transform: translateX(5%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.title {
+  text-align: center;
+  h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
+
+.App {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  .task-group {
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      width: 50%;
+      align-items: center;
+    }
+  }
+}
