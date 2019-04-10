@@ -1,0 +1,19 @@
+/* Colors */
+$dark-blue: #2b3252;
+$light-blue: #61dafb;
+$red: #ef5455;
+$white: #fff;
+$yellow: #fad744;
+
+/* Animations */
+@keyframes smooth-in {
+  from {
+    transform: translateX(-200%);
+  }
+  98% {
+    transform: translateX(5%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

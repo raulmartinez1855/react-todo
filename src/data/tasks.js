@@ -7,53 +7,58 @@ const data = [
   {
     id: randomId(),
     name: 'Syntax.fm Podcast',
-    completed: false,
+    completed: false
   },
   {
     id: randomId(),
     name: 'Code Side Projects',
-    completed: false,
+    completed: false
+  },
+  {
+    id: randomId(),
+    name: 'GE Tasker App',
+    completed: false
   },
   {
     id: randomId(),
     name: 'Rank up on Code Wars',
-    completed: false,
+    completed: false
   },
   {
     id: randomId(),
     name: 'Code',
-    completed: true,
+    completed: true
   },
   {
     id: randomId(),
     name: 'Grab some coffee',
-    completed: true,
+    completed: true
   },
   {
     id: randomId(),
     name: 'Avengers Endgame ticket',
-    completed: true,
+    completed: true
   },
   {
     id: randomId(),
     name: 'Gym (Leg Day)',
-    completed: true,
+    completed: true
   },
   {
     id: randomId(),
     name: 'Gym (Arm Day)',
-    completed: false,
+    completed: false
   },
   {
     id: randomId(),
     name: 'Gym (Shoulders Day)',
-    completed: true,
+    completed: true
   },
   {
     id: randomId(),
     name: 'Walk Dog',
-    completed: false,
-  },
+    completed: false
+  }
 ];
 
 export default data;

@@ -10,8 +10,8 @@ class App extends Component {
     addTask: {
       id: randomId(),
       name: '',
-      completed: false,
-    },
+      completed: false
+    }
   };
 
   /* add the task to the list of tasks, then clear the input */
@@ -20,7 +20,9 @@ class App extends Component {
     const { addTask } = this.state;
     const data = [...this.state.data, addTask];
 
-    this.setState({ data }, () => this.setState({ addTask: { id: randomId(), name: '', completed: false } }));
+    this.setState({ data }, () =>
+      this.setState({ addTask: { id: randomId(), name: '', completed: false } })
+    );
   };
 
   /* input handler for TaskAdder */
@@ -81,22 +83,26 @@ class App extends Component {
     const { addTask } = this.state;
 
     return (
-      <>
+      <div className="App">
         <div className="title">
           <h1>Tasker</h1>
         </div>
-        <div className="App">
+        <div className="flex-display">
           <div className="task-group">
-            <h2>Task Queue</h2>
+            <h2 className="task-group-title">Task Queue</h2>
             {this.displayTasks(false)}
           </div>
           <div className="task-group">
-            <h2>Completed</h2>
+            <h2 className="task-group-title">Completed</h2>
             {this.displayTasks(true)}
           </div>
-          <TaskAdder {...addTask} changeNewTask={this.changeNewTask} addNewTask={this.addNewTask} />
+          <TaskAdder
+            {...addTask}
+            changeNewTask={this.changeNewTask}
+            addNewTask={this.addNewTask}
+          />
         </div>
-      </>
+      </div>
     );
   }
 }
