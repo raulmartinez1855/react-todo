@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import '../sass/App.scss';
 import data, { randomId } from '../data/tasks';
 import Task from './Task';
