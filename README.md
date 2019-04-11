@@ -1,4 +1,4 @@
-A live demo can be accessed [here](https://app.netlify.com/sites/silly-torvalds-95ff8a).
+A live demo can be accessed [here](https://silly-torvalds-95ff8a.netlify.com).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
