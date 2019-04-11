@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import '../sass/App.scss';
-import data, { randomId } from '../data/tasks';
-import Task from './Task';
-import TaskAdder from './TaskAdder';
+import React, { Component } from "react";
+import "../sass/App.scss";
+import data, { randomId } from "../data/tasks";
+import Task from "./Task";
+import TaskAdder from "./TaskAdder";
 
 class App extends Component {
   state = {
     data,
     addTask: {
       id: randomId(),
-      name: '',
+      name: "",
       completed: false
     }
   };
@@ -21,7 +21,7 @@ class App extends Component {
     const data = [...this.state.data, addTask];
 
     this.setState({ data }, () =>
-      this.setState({ addTask: { id: randomId(), name: '', completed: false } })
+      this.setState({ addTask: { id: randomId(), name: "", completed: false } })
     );
   };
 
@@ -63,24 +63,8 @@ class App extends Component {
     });
   };
 
-  displayTasks = completed => {
-    return this.state.data
-      .filter(t => t.completed === completed)
-      .map(task => {
-        return (
-          <Task
-            key={task.id}
-            {...task}
-            handleCheck={this.handleCheck}
-            changeCurrentTask={this.changeCurrentTask}
-            removeCurrentTask={this.removeCurrentTask}
-          />
-        );
-      });
-  };
-
   render() {
-    const { addTask } = this.state;
+    const { data, addTask } = this.state;
 
     return (
       <div className="App">
@@ -89,12 +73,17 @@ class App extends Component {
         </div>
         <div className="flex-display">
           <div className="task-group">
-            <h2 className="task-group-title">Task Queue</h2>
-            {this.displayTasks(false)}
-          </div>
-          <div className="task-group">
-            <h2 className="task-group-title">Completed</h2>
-            {this.displayTasks(true)}
+            {data.map(task => {
+              return (
+                <Task
+                  key={task.id}
+                  {...task}
+                  handleCheck={this.handleCheck}
+                  changeCurrentTask={this.changeCurrentTask}
+                  removeCurrentTask={this.removeCurrentTask}
+                />
+              );
+            })}
           </div>
           <TaskAdder
             {...addTask}
