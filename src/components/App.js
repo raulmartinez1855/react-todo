@@ -18,8 +18,11 @@ class App extends Component {
   addNewTask = e => {
     e.preventDefault();
     const { addTask } = this.state;
+    const empty = addTask.name.trim().length;
+    if (!empty) {
+      return null;
+    }
     const data = [...this.state.data, addTask];
-
     this.setState({ data }, () =>
       this.setState({ addTask: { id: randomId(), name: "", completed: false } })
     );

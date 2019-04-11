@@ -1,7 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const Task = props => {
-  const { id, completed, name, changeCurrentTask, handleCheck, removeCurrentTask } = props;
+  const {
+    id,
+    completed,
+    name,
+    changeCurrentTask,
+    handleCheck,
+    removeCurrentTask
+  } = props;
 
   return (
     <div className="task">
@@ -13,8 +20,12 @@ const Task = props => {
         value={name}
         onChange={e => changeCurrentTask(e)}
       />
-      <button className={completed ? 'completed' : ''} type="submit" onClick={() => handleCheck(id)}>
-        {completed && '✓'}
+      <button
+        className={completed ? "completed" : ""}
+        type="submit"
+        onClick={() => handleCheck(id)}
+      >
+        {completed && "✓"}
       </button>
       <button className="remove" onClick={() => removeCurrentTask(id)}>
         X
