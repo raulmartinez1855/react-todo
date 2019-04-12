@@ -25,7 +25,7 @@ const Task = props => {
         type="submit"
         onClick={() => handleCheck(id)}
       >
-        {completed && "✓"}
+        {completed && <span>✓</span>}
       </button>
       <button className="remove" onClick={() => removeCurrentTask(id)}>
         X

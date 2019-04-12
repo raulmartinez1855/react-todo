@@ -3,7 +3,7 @@
   height: 3rem;
   display: flex;
   align-items: center;
-  animation: smooth-in 300ms ease running;
+  animation: smooth-in 300ms ease running;  
   input {
     background: $red;
     color: $white;
@@ -55,6 +55,9 @@
     }
     &.completed {
       font-weight: 700;
+      span {
+        animation: grow-to-size 100ms ease-in running;
+      }
     }
   }
 
